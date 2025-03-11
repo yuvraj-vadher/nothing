@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.2">
+  <title>Aero Engines</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css   ">
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Work Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    footer {
+      background: rgb(217, 217, 217);
+      background: linear-gradient(82deg, rgba(217, 217, 217, 1) 0%, rgba(118, 117, 117, 1) 41%, rgba(14, 14, 24, 1) 100%);
+    }
+
+    @layer base {
+      html {
+        zoom: 0.75;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-[#000111]">
+
+  <!-- Section with shared background -->
+  <div
+    class="hero-selection flex flex-col items-center relative bg-[url('/assets/img/bg/mobile-hero-bg.png')] sm:h-[1400px] md:bg-[url('/assets/img/bg/hero-bg.png')] bg-no-repeat  bg-contain">
+    <!-- Navbar -->
+    <nav
+      class=" top-0 left-0 sm:text-[18px] lg:text-[20px] md:text-[14px] max-w-[1440px] w-full flex items-center gap-4 mt-8 z-[99999]">
+      <div class="container px-1 mx-auto md:px-6">
+        <div
+          class="relative flex justify-between w-full mt-6 bg-opacity-[50%] items-center py-1 px-2 md:py-0 gap-4 bg-[#D9D9D9] rounded-full shadow-[inset_0_4px_3.4px_rgba(0,0,0,0.25)]">
+          <button id="hamburger" class="flex items-center px-8 text-black md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <button class="md:hidden flex items-center px-8 py-2 text-white rounded-full bg-[#67559B]">
+            Portal
+          </button>
+          <div
+            class="absolute z-10 transform -translate-x-1/2 md:left-0 left-1/2 md:-translate-x-1/2 md:transform-none">
+            <div class="flex items-center shadow-[inset_0_4px_3.4px_rgba(0,0,0,0.25)] p-2 bg-[#D9D9D9] rounded-full">
+              <img src="/assets/img/logo.png" alt="Logo" class="w-12 sm:w-12 md:w-12 lg:w-22 xl:w-24" />
+
+            </div>
+          </div>
+          <ul class="justify-between hidden w-full px-8 py-3 space-x-6 rounded-full md:flex pl-28">
+            <li>
+              <a href="index.html"
+                class="px-4 py-2 font-normal bg-gray-500 text-white transition rounded-md hover:bg-gray-500">Home</a>
+            </li>
+            <li class="relative group">
+              <a href="about.html" class="px-4 py-2  font-normal text-white transition rounded-md hover:bg-gray-500">
+                About
+              </a>
+              <!-- Dropdown Menu -->
+              <ul class="absolute left-0 hidden w-48 mt-2 bg-white rounded-md  shadow-lg group-hover:block">
+                <li>
+                  <a href="Our_team.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-500 hover:text-white ">
+                    Our Team
+                  </a>
+                </li>
+                <li>
+                  <a href="brand.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-500 hover:text-white ">
+                    Brand Identity
+                  </a>
+                </li>
+                <li>
+                  <a href="life.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-500 hover:text-white ">
+                    Life at TAE
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="services.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md hover:bg-gray-500">Services &
+                Inventory</a>
+            </li>
+            <li>
+              <a href="quality_check.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md hover:bg-gray-500">Quality Check</a>
+            </li>
+            <li>
+              <a href="parts.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md hover:bg-gray-500">Parts Revenue</a>
+            </li>
+            <li>
+              <a href="contact_us.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md hover:bg-gray-500">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div id="dropdown-menu" class="hidden flex-col space-y-2 bg-[#D9D9D9] rounded-md shadow-md mt-4 p-4">
+          <a href="index.html" class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Home
+          </a>
+          <ul class="relative group">
+            <a href="about.html" class="px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+              About
+            </a>
+            <!-- Dropdown Menu -->
+            <ul class="absolute left-0 hidden w-48 mt-2 bg-white rounded-md shadow-lg group-hover:block">
+              <li>
+                <a href="our_team.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="brand.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Brand Identity
+                </a>
+              </li>
+              <li>
+                <a href="life.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Life at TAE
+                </a>
+              </li>
+            </ul>
+          </ul>
+
+          </a>
+          <a href="services.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Services & Inventory
+          </a>
+          <a href="quality_check.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Quality Check
+          </a>
+          <a href="parts.html" class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Parts Revenue
+          </a>
+          <a href="contact_us.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center  ">
+      <div class="mt-[152px] md:mt-[200px] lg:mt-[440px]">
+        <h2 class="text-white font-bold text-[32px] md:text-[68px]">Target Aero Engines LLC</h2>
+        <p class="text-[#ECECEC] opacity-[66%] italic font-semibold text-[14px] md:text-[28px]">MRO Leasing
+          Company</p>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <div
+    class="container mt-40 mx-auto relative py-[14px] max-w-[1440px]  px-[30px]   lg:py-[70px] flex gap-[6px] flex-col mb-[-500px]">
+    <p class="text-[14px]  lg:mt-[-700px] sm:mt-[-50px] md:px[200px] sm:text-[20px] text-[#D4D7FE] md:mt-[-800px] text-center lg:px-90">Target Aero Engines is a Las Vegas-based aviation service company</p>
+
+    <p class="text-[14px] sm:text-[20px] text-[#D4D7FE]  md:px-6 sm:px-36 text-center md:mt-[-7px] w-[#959px]">
+      committed to integrity and excellence. With over 50 years of combined experience in
+      handling Jet Engine parts, we adhere to the highest industry standards, exemplified by
+      our ASA-100 certification.Since 2022, we've provided reliable, cost-effective solutions in aviation. Count
+      on us for quality service, whether you're an airline, MRO, leasing company, or broker.</p>
+
+  </div>
+
+
+
+  <div
+    class="bg-[#D9D9D9]  bg-opacity-[24%] mt-[-600px] sm:mt-[-300px] lg:mt-[-290px] md:mt-[-590px] lg:h-[460px]  flex justify-between relative w-full">
+
+    <div
+      class="container mx-auto relative max-w-[1440px]  px-[70px] md:py-[88px]  md:w-full  flex items-center justify-center">
+      <div class="flex flex-col md:flex-row justify-center gap-[53px] items-center  p-6  ">
+        <div
+          class="card-1 border   border-white sm:gap-8 sm:h-[315px] rounded-[18px] w-[268px] md:w-[498px] rounded-tr-[90px] p-2 md:p-4 flex flex-row md:flex-row gap-[12px] items-center md:items-center space-y-4 md:space-y-0 md:space-x-4">
+          <div class="w-full img md:w-auto">
+            <img src="/assets/img/cardicon.svg" class="hidden md:block w-full md:w-[200px]" alt="Card Icon">
+            <img src="/assets/img/cardicon-mobile.svg" class="block md:hidden w-full md:w-[166px]" alt="Card Icon">
+          </div>
+          <div class="flex flex-col gap-3   text-left  md:text-left">
+            <h2 class="text-[22px] lg:text-[28px] text-[#E66E32] font-bold">John Doe</h2>
+            <h2 class="text-[16px] lg:text-[20px] text-[#ECECEC] italic">Designation</h2>
+            <h2 class="text-[14px] lg:text-[18px] text-[#D4D7FE] max-w-[300px] md:max-w-[171px]">
+              Meet the team behind Target Aero Engines! With a shared passion for aviation, we
+            </h2>
+          </div>
+        </div>
+
+
+
+        <div
+          class="card-2 border border-white sm:gap-8 mt-[-40px] sm:mt-[-7px] rounded-[18px] sm:h-[315px] w-[268px] md:w-[498px]  rounded-tl-[90px] p-4 flex flex-row justify-end gap-[12px] items-center space-y-4 md:space-y-0 md:space-x-4">
+          <div class="flex flex-col gap-3 text-right">
+            <h2 class="text-[22px] lg:text-[28px] text-[#E66E32] font-bold">John Doe</h2>
+            <h2 class="text-[16px] lg:text-[20px] text-[#ECECEC] italic">Designation</h2>
+            <h2 class="text-[14px] lg:text-[18px] text-[#D4D7FE] max-w-[300px] md:max-w-[171px]">
+              Meet the team behind Target Aero Engines! With a shared passion for aviation, we
+            </h2>
+          </div>
+
+          <div class="w-full md:w-auto">
+            <img src="/assets/img/cardicon-mobile.svg" class="block md:hidden w-full max-w-[166px]"
+              alt="Mobile Card Icon">
+            <img src="/assets/img/cardicon-2.svg" class="hidden md:block w-full md:w-[200px]" alt="Desktop Card Icon">
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!---------------What we offer Section-->
+
+  <div class="container mx-auto relative  py-4 md:py-[88px] max-w-[1440px] px-16 sm:px-32 ">
+    <!-- Section Title -->
+    <div class="mb-8 text-left md:text-center xl:ml-[100px] xl:mr-[100px]">
+      <h2
+        class="font-bold text-center md:text-left text-white  text-[32px] md:text-[48px] lg:text-[38px] leading-tight">
+        What We Offer
+      </h2>
+    </div>
+
+    <!-- Offer Cards Section -->
+    <div class="grid items-center gap-8 sm:grid-cols-2 lg:grid-cols-3  md:grid-cols-2 xl:ml-[100px] xl:mr-[100px] ">
+      <!-- Example Card 1 -->
+      <div
+        class="flex flex-col justify-between border-gray-300 rounded-[18px] p-6 shadow-md bg-[#564288] items-center sm:w-[311px] sm:h-[524px] w-[280px] h-[350px]  gap-[6px] md:gap-[39px] ">
+        <div class="w-[283px] h-[283px] bg-black rounded-[18px] border border-white"></div>
+        <div class="gap-[6px] md:gap-[17px] mt-[-30px]">
+          <h3 class="text-[18px] sm:text-[20px] font-semibold text-white mb-4 text-center">
+            Engine Asset &amp; Piece Parts Lot Purchase:
+          </h3>
+          <p class="text-white text-[14px] sm:text-[16px] text-center w-full max-w-[100%] mx-auto">
+            We purchase new, overhauled, as removed, serviceable, and surplus engine
+            parts. Engine Models - CF680C2, V2500A5, PW4000, LEAP, GE90
+          </p>
+
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-between border-gray-300 rounded-[18px] p-6 shadow-md bg-[#564288] items-center sm:w-[311px] sm:h-[524px] w-[280px] h-[350px]  gap-[6px] md:gap-[39px]">
+        <div class="w-[283px] h-[283px] bg-black rounded-[18px] border border-white"></div>
+        <div class="gap-[6px] md:gap-[17px]">
+          <h3 class="text-[18px] sm:text-[20px] font-semibold text-white mb-4 text-center">
+            Engine Parts Sales:
+          </h3>
+          <p class="text-white text-[14px] sm:text-[16px] text-center w-full max-w-[100%] mx-auto">
+            We offer high-quality materials accompanied by the latest OEM, OEM-approved, and FAA/EASA tags along with
+            clean traceability, ensuring airworthiness.
+          </p>
+
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-between border-gray-300 rounded-[18px] p-6 shadow-md bg-[#564288] items-center sm:w-[311px] sm:h-[524px] w-[280px] h-[350px]  gap-[6px] md:gap-[39px]">
+        <div class="w-[283px] h-[283px] bg-black rounded-[18px] border border-white"></div>
+        <div class="gap-[6px] md:gap-[17px]">
+          <h3 class="text-[18px] sm:text-[20px] font-semibold text-white mb-4 text-center">
+            Consignment Program:
+          </h3>
+          <p class="text-white text-[14px] sm:text-[16px] text-center w-full max-w-[100%] mx-auto">
+            We invite all airlines, MROs, and leasing companies to contact us for detailed information on transforming
+            your neglected assets into revenue.
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <script>
+    // Import Swiper styles (ensure this is in your JS file where you initialize Swiper)
+    import 'swiper/swiper-bundle.css';
+    import Swiper from 'swiper/bundle';
+
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper-container', {
+      loop: true, // Enables looping
+      autoplay: {
+        delay: 2500, // Delay between transitions (in milliseconds)
+        disableOnInteraction: false, // Autoplay will not be disabled after user interactions
+      },
+      pagination: {
+        el: '.swiper-pagination', // If you want pagination bullets
+        clickable: true, // Allows clicking on pagination bullets
+      },
+      // Optional: You can adjust additional settings here
+    });
+  </script>
+
+  <div
+    class="container mx-auto relative  py-4 md:py-[88px] max-w-[1440px] px-16 sm:px-32 flex flex-col justify-between">
+    <!-- Section Title -->
+    <div class="mb-8 text-left md:text-center xl:ml-[100px] xl:mr-[100px]">
+      <h2
+        class="font-bold text-center md:text-left text-white  text-[32px] md:text-[48px] lg:text-[38px] leading-tight">
+        Client Testimonials</h2>
+    </div>
+
+    <!-- Swiper Section -->
+    <div class="overflow-hidden swiper-container xl:ml-[100px] xl:mr-[100px]">
+      <div class="swiper-wrapper flex gap-2">
+        <!-- Card 1 -->
+        <div
+          class="swiper-slide card bg-[#D9D9D9] bg-opacity-[86%] rounded-[18px] sm:w-[376px] sm:h-[377px] p-4 justify-between flex flex-col w-full min-h-[250px] md:min-h-[250px] relative">
+          <div class="py-2 px-4 md:px-7">
+            <!-- Header -->
+            <div class="text-left card-header">
+              <p class="text-sm md:text-base">Client</p>
+            </div>
+
+            <!-- Messages Section -->
+            <div class="flex flex-col w-full gap-[30px] mt-2">
+              <!-- Client Message -->
+              <div class="flex items-start w-full">
+                <div class="message-box bg-[#564288] text-white rounded-[18px] w-[233px] p-2  max-w-[80%] h-[90px]">
+                </div>
+              </div>
+
+              <!-- Response Message -->
+              <div class="flex items-end w-full justify-end">
+                <div class="message-box bg-white text-black rounded-[18px] p-2 w-[209px] h-[49px] max-w-[80%]">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div
+            class="w-[376px] left-0 absolute h-[113px] bottom-0 bg-[#D9D9D9] bg-opacity-86 rounded-[18px] px-4 md:px-3 py-2 flex items-center justify-between mt-4 gap-[17px]">
+            <!-- Name -->
+            <h2 class="text-[24px] font-semibold ml-[61px]">Mrs. John Doe</h2>
+            <!-- Image -->
+            <img src="/assets/img/persons/person-1.jpg"
+              class="w-12 h-12 md:w-[104px] md:h-[95px] rounded-[18px] flex-shrink-0" alt="Client Image">
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide card bg-[#D9D9D9] bg-opacity-[86%] rounded-[18px] sm:w-[376px] sm:h-[377px] p-4 justify-between flex flex-col w-full min-h-[250px] md:min-h-[250px] relative">
+          <div class="py-2 px-4 md:px-7">
+            <!-- Header -->
+            <div class="text-left card-header">
+              <p class="text-sm md:text-base">Client</p>
+            </div>
+
+            <!-- Messages Section -->
+            <div class="flex flex-col w-full gap-[30px] mt-2">
+              <!-- Client Message -->
+              <div class="flex items-start w-full">
+                <div class="message-box bg-[#564288] text-white rounded-[18px] w-[233px] p-2  max-w-[80%] h-[90px]">
+                </div>
+              </div>
+
+              <!-- Response Message -->
+              <div class="flex items-end w-full justify-end">
+                <div class="message-box bg-white text-black rounded-[18px] p-2 w-[209px] h-[49px] max-w-[80%]">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div
+            class="w-[376px] left-0 absolute h-[113px] bottom-0 bg-[#D9D9D9] bg-opacity-86 rounded-[18px] px-4 md:px-3 py-2 flex items-center justify-between mt-4 gap-[17px]">
+            <!-- Name -->
+            <h2 class="text-[24px] font-semibold ml-[61px]">Mrs. John Doe</h2>
+            <!-- Image -->
+            <img src="/assets/img/persons/person-1.jpg"
+              class="w-12 h-12 md:w-[104px] md:h-[95px] rounded-[18px] flex-shrink-0" alt="Client Image">
+          </div>
+        </div>
+        <div
+          class="swiper-slide card bg-[#D9D9D9] bg-opacity-[86%] rounded-[18px] sm:w-[376px] sm:h-[377px] p-4 justify-between flex flex-col w-full min-h-[250px] md:min-h-[250px] relative">
+          <div class="py-2 px-4 md:px-7">
+            <!-- Header -->
+            <div class="text-left card-header">
+              <p class="text-sm md:text-base">Client</p>
+            </div>
+
+            <!-- Messages Section -->
+            <div class="flex flex-col w-full gap-[30px] mt-2">
+              <!-- Client Message -->
+              <div class="flex items-start w-full">
+                <div class="message-box bg-[#564288] text-white rounded-[18px] w-[233px] p-2  max-w-[80%] h-[90px]">
+                </div>
+              </div>
+
+              <!-- Response Message -->
+              <div class="flex items-end w-full justify-end">
+                <div class="message-box bg-white text-black rounded-[18px] p-2 w-[209px] h-[49px] max-w-[80%]">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div
+            class="w-[376px] left-0 absolute h-[113px] bottom-0 bg-[#D9D9D9] bg-opacity-86 rounded-[18px] px-4 md:px-3 py-2 flex items-center justify-between mt-4 gap-[17px]">
+            <!-- Name -->
+            <h2 class="text-[24px] font-semibold ml-[61px]">Mrs. John Doe</h2>
+            <!-- Image -->
+            <img src="/assets/img/persons/person-1.jpg"
+              class="w-12 h-12 md:w-[104px] md:h-[95px] rounded-[18px] flex-shrink-0" alt="Client Image">
+          </div>
+        </div>
+        <div
+          class="swiper-slide card bg-[#D9D9D9] bg-opacity-[86%] rounded-[18px] sm:w-[376px] sm:h-[377px] p-4 justify-between flex flex-col w-full min-h-[250px] md:min-h-[250px] relative">
+          <div class="py-2 px-4 md:px-7">
+            <!-- Header -->
+            <div class="text-left card-header">
+              <p class="text-sm md:text-base">Client</p>
+            </div>
+
+            <!-- Messages Section -->
+            <div class="flex flex-col w-full gap-[30px] mt-2">
+              <!-- Client Message -->
+              <div class="flex items-start w-full">
+                <div class="message-box bg-[#564288] text-white rounded-[18px] w-[233px] p-2  max-w-[80%] h-[90px]">
+                </div>
+              </div>
+
+              <!-- Response Message -->
+              <div class="flex items-end w-full justify-end">
+                <div class="message-box bg-white text-black rounded-[18px] p-2 w-[209px] h-[49px] max-w-[80%]">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div
+            class="w-[376px] left-0 absolute h-[113px] bottom-0 bg-[#D9D9D9] bg-opacity-86 rounded-[18px] px-4 md:px-3 py-2 flex items-center justify-between mt-4 gap-[17px]">
+            <!-- Name -->
+            <h2 class="text-[24px] font-semibold ml-[61px]">Mrs. John Doe</h2>
+            <!-- Image -->
+            <img src="/assets/img/persons/person-1.jpg"
+              class="w-12 h-12 md:w-[104px] md:h-[95px] rounded-[18px] flex-shrink-0" alt="Client Image">
+          </div>
+        </div>
+        <div
+          class="swiper-slide card bg-[#D9D9D9] bg-opacity-[86%] rounded-[18px] sm:w-[376px] sm:h-[377px] p-4 justify-between flex flex-col w-full min-h-[250px] md:min-h-[250px] relative">
+          <div class="py-2 px-4 md:px-7">
+            <!-- Header -->
+            <div class="text-left card-header">
+              <p class="text-sm md:text-base">Client</p>
+            </div>
+
+            <!-- Messages Section -->
+            <div class="flex flex-col w-full gap-[30px] mt-2">
+              <!-- Client Message -->
+              <div class="flex items-start w-full">
+                <div class="message-box bg-[#564288] text-white rounded-[18px] w-[233px] p-2  max-w-[80%] h-[90px]">
+                </div>
+              </div>
+
+              <!-- Response Message -->
+              <div class="flex items-end w-full justify-end">
+                <div class="message-box bg-white text-black rounded-[18px] p-2 w-[209px] h-[49px] max-w-[80%]">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div
+            class="w-[376px] left-0 absolute h-[113px] bottom-0 bg-[#D9D9D9] bg-opacity-86 rounded-[18px] px-4 md:px-3 py-2 flex items-center justify-between mt-4 gap-[17px]">
+            <!-- Name -->
+            <h2 class="text-[24px] font-semibold ml-[61px]">Mrs. John Doe</h2>
+            <!-- Image -->
+            <img src="/assets/img/persons/person-1.jpg"
+              class="w-12 h-12 md:w-[104px] md:h-[95px] rounded-[18px] flex-shrink-0" alt="Client Image">
+          </div>
+        </div>
+        <div
+          class="swiper-slide card bg-[#D9D9D9] bg-opacity-[86%] rounded-[18px] sm:w-[376px] sm:h-[377px] p-4 justify-between flex flex-col w-full min-h-[250px] md:min-h-[250px] relative">
+          <div class="py-2 px-4 md:px-7">
+            <!-- Header -->
+            <div class="text-left card-header">
+              <p class="text-sm md:text-base">Client</p>
+            </div>
+
+            <!-- Messages Section -->
+            <div class="flex flex-col w-full gap-[30px] mt-2">
+              <!-- Client Message -->
+              <div class="flex items-start w-full">
+                <div class="message-box bg-[#564288] text-white rounded-[18px] w-[233px] p-2  max-w-[80%] h-[90px]">
+                </div>
+              </div>
+
+              <!-- Response Message -->
+              <div class="flex items-end w-full justify-end">
+                <div class="message-box bg-white text-black rounded-[18px] p-2 w-[209px] h-[49px] max-w-[80%]">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div
+            class="w-[376px] left-0 absolute h-[113px] bottom-0 bg-[#D9D9D9] bg-opacity-86 rounded-[18px] px-4 md:px-3 py-2 flex items-center justify-between mt-4 gap-[17px]">
+            <!-- Name -->
+            <h2 class="text-[24px] font-semibold ml-[61px]">Mrs. John Doe</h2>
+            <!-- Image -->
+            <img src="/assets/img/persons/person-1.jpg"
+              class="w-12 h-12 md:w-[104px] md:h-[95px] rounded-[18px] flex-shrink-0" alt="Client Image">
+          </div>
+        </div>
+
+
+      </div>
+
+      <!--  -->
+
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+  <div class="container mx-auto relative  py-4 md:py-[88px] max-w-[1440px] px-16 sm:px-32 ">
+
+
+    <!-- Section Title -->
+    <div class="mb-8 text-left md:text-center xl:ml-[100px] xl:mr-[100px]">
+      <h2
+        class="font-bold text-center md:text-left text-white  text-[32px] md:text-[48px] lg:text-[38px] leading-tight">
+        Our Clients</h2>
+    </div>
+
+    <!-- Offer Cards Section -->
+    <div
+      class="grid justify-center gap-3 offer-cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:mt-3 mt-[-15px] xl:ml-[100px] xl:mr-[100px] items-center">
+      <!-- Card 1 -->
+      <div
+        class="py-2 w-[305px] px-4 bg-gradient-to-r from-[#AC9AD7] to-[#737373] rounded-full md:h-[67px] text-center md:px-6 lg:px-8 flex items-center justify-center">
+        <h2 class="font-semibold text-[#ECECEC] text-[20px] md:text-base">
+          Airlines
+        </h2>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="py-2 w-[305px] px-4 bg-gradient-to-r from-[#AC9AD7] to-[#737373] rounded-full md:h-[67px] text-center md:px-6 lg:px-8  flex items-center justify-center">
+        <h2 class="font-semibold text-[#ECECEC] text-[20px] sm:text-sm md:text-base">
+          MRO
+        </h2>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="py-2 w-[305px] px-4 bg-gradient-to-r from-[#AC9AD7] to-[#737373] md:h-[67px] rounded-full text-center md:px-6 lg:px-8  flex items-center justify-center">
+        <h2 class="font-semibold text-[#ECECEC] text-[20px] sm:text-sm md:text-base">
+          Leasing Companies
+        </h2>
+      </div>
+    </div>
+
+
+
+
+    <div class="w-full max-w-[1440px] mt-8 sm:mt-24 mx-auto px-2 sm:px-4">
+      <!-- Top Divider -->
+      <div class="border-t border-white xl:ml-[100px] xl:mr-[100px]"></div>
+
+      <!-- Content Section -->
+      <div
+        class="flex flex-row flex-wrap items-center gap-2 sm:gap-4 py-3 sm:py-4 justify-center sm:justify-between xl:ml-[100px] xl:mr-[100px]">
+        <!-- Shapes Section -->
+        <div class="flex flex-row sm:flex-row items-center gap-2 sm:gap-8">
+          <!-- Item Group 1 -->
+          <div class="flex items-center space-x-2 sm:space-x-4">
+            <div class="w-[85px] h-[40px]  bg-[#D9D9D9DB] rounded-full"></div>
+            <svg class="w-5 h-5 sm:w-8 sm:h-8 transform rotate-180" viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path fill="#AC9AD7"
+                d="M8 1.25a2.101 2.101 0 00-1.785.996l.64.392-.642-.388-5.675 9.373-.006.01a2.065 2.065 0 00.751 2.832c.314.183.67.281 1.034.285h11.366a2.101 2.101 0 001.791-1.045 2.064 2.064 0 00-.006-2.072L9.788 2.25l-.003-.004A2.084 2.084 0 008 1.25z" />
+            </svg>
+
+
+            <div class="w-px h-5 sm:h-8 bg-white hidden sm:block"></div>
+          </div>
+
+          <!-- Item Group 2 -->
+          <div class="flex items-center space-x-2 sm:space-x-4">
+            <div class="w-[85px] h-[40px]  bg-[#D9D9D9DB] rounded-full"></div>
+            <svg class="w-5 h-5 sm:w-8 sm:h-8 transform rotate-180" viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path fill="#AC9AD7"
+                d="M8 1.25a2.101 2.101 0 00-1.785.996l.64.392-.642-.388-5.675 9.373-.006.01a2.065 2.065 0 00.751 2.832c.314.183.67.281 1.034.285h11.366a2.101 2.101 0 001.791-1.045 2.064 2.064 0 00-.006-2.072L9.788 2.25l-.003-.004A2.084 2.084 0 008 1.25z" />
+            </svg>
+
+            <div class="w-px h-5 sm:h-8 bg-white hidden sm:block"></div>
+          </div>
+
+          <!-- Item Group 3 -->
+          <div class="flex items-center space-x-2 sm:space-x-4">
+            <div class="w-[85px] h-[40px] bg-[#D9D9D9DB] rounded-full"></div>
+            <svg class="w-5 h-5 sm:w-8 sm:h-8 transform rotate-180" viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path fill="#AC9AD7"
+                d="M8 1.25a2.101 2.101 0 00-1.785.996l.64.392-.642-.388-5.675 9.373-.006.01a2.065 2.065 0 00.751 2.832c.314.183.67.281 1.034.285h11.366a2.101 2.101 0 001.791-1.045 2.064 2.064 0 00-.006-2.072L9.788 2.25l-.003-.004A2.084 2.084 0 008 1.25z" />
+            </svg>
+
+
+          </div>
+        </div>
+
+
+        <!-- Search Button -->
+        <!-- <div class="w-full sm:w-auto flex justify-center  sm:justify-end mt-2 sm:mt-0">
+          <button
+            class="bg-purple-500 w-[320px] opacity-70 text-white rounded-full flex items-center px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
+            Inventory Search...
+            <div class="w-10 h-5 sm:w-16 sm:h-8 bg-[#D9D9D9DB] rounded-full ml-2 sm:ml-4"></div>
+          </button>
+        </div> -->
+        <div class="w-full sm:w-auto flex justify-center  sm:justify-end mt-2 sm:mt-0">
+          <button
+            class="bg-purple-500 w-[430px] opacity-70 text-white rounded-full flex items-center justify-between px-4 py-2 text-sm sm:text-base">
+            Inventory Search...
+            <div class="w-16 h-8 bg-[#D9D9D9DB] rounded-full"></div>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Divider -->
+      <div class="border-t border-white xl:ml-[100px] xl:mr-[100px]"></div>
+    </div>
+
+
+
+
+    <!-- Styles -->
+    <style>
+      .clip-reversed-triangle {
+        width: 24px;
+        height: 24px;
+        background-color: #ac9ad7;
+        border-radius: 6px;
+        clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+      }
+
+      @media (min-width: 640px) {
+        .clip-reversed-triangle {
+          width: 32px;
+          height: 32px;
+          border-radius: 8px;
+        }
+      }
+    </style>
+
+
+
+
+
+
+
+  </div>
+  </div>
+  <footer class="py-8 mt-8 text-white ">
+    <div class="container mx-auto   max-w-[944px] flex flex-row items-center justify-between">
+      <!-- Logo Section -->
+      <div class="flex flex-col items-center md:items-center">
+        <img src="/assets/img/logo.png" alt="Target Aero Engines" width="80" height="105" class="mb-4" />
+        <h2 class="text-[16px] text-center md:text-center">
+          Target Aero Engines
+        </h2>
+      </div>
+
+      <!-- Contact Information Section -->
+      <div class="flex flex-col items-center md:items-center w-[350px]">
+        <h2 class="text-[12px] md:text-sm text-center">
+          sales@targetaeroengines.com
+        </h2>
+        <p class="text-[16px] md:text-sm text-center">
+          4100 West Flamingo Road, Las Vegas, Nevada 89103, USA
+        </p>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="flex-col items-center hidden md:items-start md:block">
+        <h2 class="mb-2 text-lg text-center">Follow us</h2>
+        <div class="flex gap-4">
+          <i class="ri-instagram-line text-[22px]"></i>
+
+          <i class="ri-facebook-circle-fill text-[22px]"></i>
+
+          <i class="ri-youtube-fill text-[22px]"></i>
+          <!-- Replace with real social icons -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div
+    class="container max-w-[958px] flex flex-col items-center text-center justify-between  gap-2 px-4 mx-auto md:px-8 md:flex-row text-[#ECECEC] py-4">
+    <p class="text-center sm:text-[18px] text-[12px]">Designed by</p>
+    <p class="text-center sm:text-[18px] text-[12px]">TAE© Copyright 2023 All Rights Reserved</p>
+  </div>
+
+  <style>
+    @media (max-width: 768px) {
+      footer .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      footer .container>div {
+        margin-left: 0 !important;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  </style>
+
+</body>
+
+
+<script src="/assets/js/menu.js"></script>
+<script src="/assets/js/script.js"></script>
+
+</html>

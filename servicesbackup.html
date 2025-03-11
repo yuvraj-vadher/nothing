@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aero Engines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Work Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      footer {
+        background: linear-gradient(
+          141deg,
+          #d9d9d9 0%,
+          #767575 41%,
+          #0e0e18 100%
+        );
+      }
+
+      @layer base {
+      html {
+        zoom: 0.75;
+      }
+    }
+    </style>
+  </head>
+
+  <body class="bg-black overflow-x-hidden">
+    <div
+    class="hero-selection flex flex-col items-center relative bg-[url('/assets/img/bg/services.png')] sm:h-[1400px] md:bg-[url('/assets/img/bg/services.png')] bg-no-repeat  bg-contain"
+  >
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black opacity-[76%] pointer-events-none z-0"></div>
+      <!-- Navbar -->
+      <nav
+      class=" top-0 left-0 sm:text-[18px] lg:text-[20px] md:text-[14px] max-w-[1440px] w-full flex items-center gap-4 mt-8 z-[99999]">
+      <div class="container px-1 mx-auto md:px-6">
+        <div
+          class="relative flex justify-between w-full mt-6 bg-opacity-[50%] items-center py-1 px-2 md:py-0 gap-4 bg-[#D9D9D9] rounded-full shadow-[inset_0_4px_3.4px_rgba(0,0,0,0.25)]">
+          <button id="hamburger" class="flex items-center px-8 text-black md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <button class="md:hidden flex items-center px-8 py-2 text-white rounded-full bg-[#67559B]">
+            Portal
+          </button>
+          <div
+            class="absolute z-10 transform -translate-x-1/2 md:left-0 left-1/2 md:-translate-x-1/2 md:transform-none">
+            <div class="flex items-center shadow-[inset_0_4px_3.4px_rgba(0,0,0,0.25)] p-2 bg-[#D9D9D9] rounded-full">
+              <img src="/assets/img/logo.png" alt="Logo" class="w-12 sm:w-12 md:w-12 lg:w-22 xl:w-24" />
+
+            </div>
+          </div>
+          <ul class="justify-between hidden w-full px-8 py-3 space-x-6 rounded-full md:flex pl-28">
+            <li>
+              <a href="index.html"
+                class="px-4 py-2 font-normal  text-white transition rounded-md ">Home</a>
+            </li>
+            <li class="relative group">
+              <a href="about.html" class="px-4 py-2  font-normal text-white transition rounded-md">
+                About
+              </a>
+              <!-- Dropdown Menu -->
+              <ul class="absolute left-0 hidden w-48 mt-2 bg-white rounded-md  shadow-lg group-hover:block">
+                <li>
+                  <a href="Our_team.html" class="block px-4 py-2 text-gray-700 0 hover:text-white ">
+                    Our Team
+                  </a>
+                </li>
+                <li>
+                  <a href="brand.html" class="block px-4 py-2 text-gray-700 0 hover:text-white ">
+                    Brand Identity
+                  </a>
+                </li>
+                <li>
+                  <a href="life.html" class="block px-4 py-2 text-gray-700 0 hover:text-white ">
+                    Life at TAE
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="services.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md ">Services &
+                Inventory</a>
+            </li>
+            <li>
+              <a href="quality_check.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md ">Quality Check</a>
+            </li>
+            <li>
+              <a href="parts.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md ">Parts Revenue</a>
+            </li>
+            <li>
+              <a href="contact_us.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md ">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div id="dropdown-menu" class="hidden flex-col space-y-2 bg-[#D9D9D9] rounded-md shadow-md mt-4 p-4">
+          <a href="index.html" class="block px-4 py-2 font-normal text-black transition rounded-md ">
+            Home
+          </a>
+          <ul class="relative group">
+            <a href="about.html" class="px-4 py-2 font-normal text-black transition rounded-md ">
+              About
+            </a>
+            <!-- Dropdown Menu -->
+            <ul class="absolute left-0 hidden w-48 mt-2 bg-white rounded-md shadow-lg group-hover:block">
+              <li>
+                <a href="our_team.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="brand.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Brand Identity
+                </a>
+              </li>
+              <li>
+                <a href="life.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Life at TAE
+                </a>
+              </li>
+            </ul>
+          </ul>
+
+          </a>
+          <a href="services.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Services & Inventory
+          </a>
+          <a href="quality_check.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Quality Check
+          </a>
+          <a href="parts.html" class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Parts Revenue
+          </a>
+          <a href="contact_us.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+
+    </nav>
+
+      <section class="container mx-auto px-4 sm:px-6 py-12 md:py-24 mt-16">
+        <!-- Content Section -->
+        <div class="w-full px-4 sm:px-6 lg:px-48">
+          <h1
+            class="relative text-white sm:text-[75px] text-[32px] sm:mt-[-50px] font-bold mb-4 sm:mb-6 text-center sm:text-center"
+          >
+            Services and Inventory
+          </h1>
+        </div>
+      </section>
+    </div>
+    <!-- part2  -->
+    <div 
+  class="container mx-auto relative md:py-[88px] max-w-[1440px] sm:px-32 ">
+    <!-- Section Title -->
+    <div class="mb-8 text-left md:text-center xl:ml-[100px] xl:mr-[100px]">
+      <h2
+        class="font-bold text-center md:text-left text-white  text-[32px] md:text-[48px] lg:text-[38px] leading-tight">
+        What We Offer
+      </h2>
+    </div>
+
+    <!-- Offer Cards Section -->
+    <div class="grid items-center gap-8 sm:grid-cols-2 lg:grid-cols-3  md:grid-cols-2 xl:ml-[100px] xl:mr-[100px] ">
+      <!-- Example Card 1 -->
+      <div
+      class="flex flex-col justify-between border-gray-300 rounded-[18px] p-6 shadow-md bg-[#564288] items-center sm:w-[311px] sm:h-[524px] w-[280px] h-[350px]  gap-[6px] md:gap-[39px] ">
+      <div class="w-[283px] h-[240px] bg-black rounded-[18px] border border-white flex-shrink-0"></div>
+      <div class="gap-[6px] md:gap-[17px] flex flex-col items-center">
+        <h3 class="text-[18px] sm:text-[20px] font-semibold text-white mb-4 text-center min-h-[60px]">
+        Engine Asset &amp; Piece Parts Lot Purchase:
+        </h3>
+        <p class="text-white text-[14px] sm:text-[16px] text-center w-full max-w-[100%] mx-auto">
+        We purchase new, overhauled, as removed, serviceable, and surplus engine
+        parts. Engine Models - CF680C2, V2500A5, PW4000, LEAP, GE90
+        </p>
+      </div>
+      </div>
+
+      <div
+      class="flex flex-col justify-between border-gray-300 rounded-[18px] p-6 shadow-md bg-[#564288] items-center sm:w-[311px] sm:h-[524px] w-[280px] h-[350px]  gap-[6px] md:gap-[39px]">
+      <div class="w-[283px] h-[240px] bg-black rounded-[18px] border border-white flex-shrink-0"></div>
+      <div class="gap-[6px] md:gap-[17px] flex flex-col items-center">
+        <h3 class="text-[18px] sm:text-[20px] font-semibold text-white mb-4 text-center min-h-[60px]">
+        Engine Parts Sales:
+        </h3>
+        <p class="text-white text-[14px] sm:text-[16px] text-center w-full max-w-[100%] mx-auto">
+        We offer high-quality materials accompanied by the latest OEM, OEM-approved, and FAA/EASA tags along with
+        clean traceability, ensuring airworthiness.
+        </p>
+
+      </div>
+      </div>
+
+      <div
+      class="flex flex-col justify-between border-gray-300 rounded-[18px] p-6 shadow-md bg-[#564288] items-center sm:w-[311px] sm:h-[524px] w-[280px] h-[350px]  gap-[6px] md:gap-[39px]">
+      <div class="w-[283px] h-[240px] bg-black rounded-[18px] border border-white flex-shrink-0"></div>
+      <div class="gap-[6px] md:gap-[17px] flex flex-col items-center">
+        <h3 class="text-[18px] sm:text-[20px] font-semibold text-white mb-4 text-center min-h-[60px]">
+        Consignment Program:
+        </h3>
+        <p class="text-white text-[14px] sm:text-[16px] text-center w-full max-w-[100%] mx-auto">
+        We invite all airlines, MROs, and leasing companies to contact us for detailed information on transforming
+        your neglected assets into revenue.
+
+      </div>
+      </div>
+
+    </div>
+
+  </div>
+
+    <!-- part3  -->
+    <!-- <style>
+      @keyframes textColorChange {
+        0%,
+        100% {
+          color: orange;
+        }
+        50% {
+          color: gray;
+        }
+      }
+
+      .animate-text {
+        animation: textColorChange 2s infinite;
+      }
+    </style> -->
+    <div class="max-w-4xl mx-auto sm:px-0 md:ml-2 md:px-8 px-6 py-16 sm:ml-[350px] lg:ml-80 space-y-6">
+      <!-- Heading -->
+      <h1 class="text-[24px] sm:text-[68px] lg:mt-[-50px] mt-[-90px] font-bold text-white">
+        Parts Sales
+      </h1>
+
+      <!-- Description Paragraph -->
+      <p class="text-[12px] sm:text-[16px] text-gray-300">
+        At Target Aero Engines, we take pride in presenting a comprehensive
+        selection of overhauled parts to our esteemed network of buyers,
+        including OEMs, end users, and brokers. Our meticulously sourced parts
+        originate from new-generation engines CFM6-5B/7B, V2500A5, CF680C2,
+        PW4000, and GE90 crafted by industry leaders such as CFM International,
+        GE, IAE, and Pratt & Whitney.
+      </p>
+
+      <!-- Animated Center Paragraph -->
+      <p
+        class="text-[20px] sm:text-[40px] text-left text-gray-400 font-semibold animate-text"
+      >
+        Transparency is one of our core values, reflecting our commitment to
+        only quote what we have in inventory.
+      </p>
+
+      <!-- Footer Paragraph -->
+      <p class="text-[12px] sm:text-[16px] text-gray-300">
+        Discover our extensive inventory available for sale on the dedicated
+        “Parts for Sale” page of this website. Here, users can effortlessly
+        search for parts based on engine type and part number, streamlining the
+        process of finding the perfect component for your needs. Additionally,
+        our parts are also listed on ILSmart.com, b2b-aero, StockMarket.aero.
+      </p>
+      <!-- dro down -->
+      <style>
+        /* Rotate the triangle downwards by default */
+        .triangle-down {
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid #d9d9d9;
+        }
+      </style>
+      <!-- Search Bar with Dropdown -->
+      <div class="relative w-full">
+        <input
+          type="text"
+          placeholder="Search Part Number........................................................."
+          class="w-full p-4 pr-12 rounded-full bg-black border border-white text-white focus:outline-none focus:ring-2 focus:ring-white"
+        />
+        <div class="absolute inset-y-0 right-1 flex items-center">
+          <!-- Dropdown Button -->
+          <button
+            id="dropdownBtn"
+            class="absolute top-1/2 transform -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-transparent flex items-center justify-center"
+          >
+            <div class="triangle-down"></div>
+          </button>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div
+          id="dropdownMenu"
+          class="hidden absolute top-full right-0 mt-2 w-full bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+        >
+          <ul class="text-gray-300">
+            <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Option 1</li>
+            <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Option 2</li>
+            <li class="px-4 py-2 hover:bg-gray-700 cursor-pointer">Option 3</li>
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        // Dropdown functionality
+        const dropdownBtn = document.getElementById("dropdownBtn");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        dropdownBtn.addEventListener("click", () => {
+          dropdownMenu.classList.toggle("hidden");
+        });
+      </script>
+    </div>
+    <!-- boxex part4 -->
+    <div
+      class="bg-black text-white min-h-screen flex flex-col items-center justify-center p-4"
+    >
+      <!-- Grid Container -->
+      <div
+        class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 w-full gap-x-4 gap-y-6 px-4 sm:px-12 lg:px-72"
+      >
+        <!-- Box 1 -->
+        <div
+          class="sm:w-[311px] sm:h-[257px] w-[153px] h-[217px] bg-[#767575] rounded-lg"
+        ></div>
+        <!-- Box 2 -->
+        <div
+          class="sm:w-[311px] sm:h-[257px] w-[153px] h-[217px] bg-[#D9D9D9] rounded-lg"
+        ></div>
+        <!-- Box 3 -->
+        <div
+          class="sm:w-[311px] sm:h-[257px] w-[153px] h-[217px] bg-[#767575] rounded-lg"
+        ></div>
+        <!-- Box 4 -->
+        <div
+          class="sm:w-[311px] sm:h-[257px] w-[153px] h-[217px] bg-[#D9D9D9] rounded-lg"
+        ></div>
+        <!-- Box 5 -->
+        <div
+          class="sm:w-[311px] sm:h-[257px] w-[153px] h-[217px] bg-[#767575] rounded-lg"
+        ></div>
+        <!-- Box 6 -->
+        <div
+          class="sm:w-[311px] sm:h-[257px] w-[153px] h-[217px] bg-[#D9D9D9] rounded-lg"
+        ></div>
+        <!-- Box 7 -->
+        <div
+          class="sm:w-[311px] sm:h-[257px] w-[153px] h-[217px] bg-[#767575] rounded-lg"
+        ></div>
+        <!-- Box 8 -->
+        <div
+          class="sm:w-[311px] sm:h-[257px] w-[153px] h-[217px] bg-[#D9D9D9] rounded-lg"
+        ></div>
+      </div>
+
+      <!-- Paragraph -->
+      <p class="text-[12px] text-[#D4D7FE] sm:text-[24px] sm:mt-16 mt-4 px-4 sm:px-12 lg:px-72">
+        At Target Aero Engines, we are committed to delivering top-notch
+        overhauled parts with full traceability, ensuring reliability, and
+        facilitating a seamless experience for our valued customers.
+      </p>
+    </div>
+
+    <!-- part 5 -->
+    <div
+      class="flex flex-col items-center sm:mt-[-80px] justify-center px-4 lg:px-72  h-screen bg-black"
+    >
+      <div
+        class="flex flex-col-reverse md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-6 p-6"
+      >
+        <!-- Left Form Section -->
+        <div class="bg-[#808087] p-6  rounded-lg w-full sm:mt-[-40px] md:w-3/5 h-auto sm:h-[450px] ">
+          <form class="space-y-6 mt-12">
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-white mb-1 p-1 sm:text-[24px] text-[12px]"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="w-full p-2 rounded rounded-[20px] p-3 bg-[#D9D9D9DB] text-black focus:outline-none"
+                placeholder="Enter your name"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-white mb-1 p-1 sm:text-[24px] text-[12px]"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="w-full p-2 rounded rounded-[20px] p-3 bg-[#D9D9D9DB] text-black focus:outline-none"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div>
+              <label
+                for="part"
+                class="block text-sm font-medium text-white mb-1 p-1 sm:text-[24px] text-[12px]"
+                >Part Number</label
+              >
+              <input
+                type="text"
+                id="part"
+                class="w-full p-2 rounded rounded-[20px] p-3 bg-[#D9D9D9DB] text-black focus:outline-none"
+                placeholder="Enter part number"
+              />
+            </div>
+          </form>
+        </div>
+        <!-- Right Content Section -->
+        <div
+          class="w-full md:w-1/2 flex flex-col md:mt-24  justify-center text-center md:text-left"
+        >
+          <h1
+            class="text-[24px] sm:text-[64px] md:text-[48px]  sm:ml-16 mt-[-90px] font-bold text-white mb-2 text-left"
+          >
+            Drop us a text!
+          </h1>
+          <p
+            class="text-[12px] sm:text-[24px] mb-4 sm:ml-16 text-gray-300 text-left"
+          >
+            Drop us the part number for the part you want more information on,
+            and we will get in touch with you.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="py-8 mt-8 text-white ">
+    <div class="container mx-auto   max-w-[944px] flex flex-row items-end justify-between">
+      <!-- Logo Section -->
+      <div class="flex flex-col items-center md:items-center">
+        <img src="/assets/img/logo.png" alt="Target Aero Engines" width="100" height="105" />
+        <h2 class="text-[16px] text-center md:text-center">
+          Target Aero Engines
+        </h2>
+      </div>
+
+      <!-- Contact Information Section -->
+      <div class="flex flex-col items-center md:items-center w-[350px]">
+        <h2 class="text-[12px] md:text-sm text-center">
+          sales@targetaeroengines.com
+        </h2>
+        <p class="text-[16px] md:text-sm text-center">
+          4100 West Flamingo Road, Las Vegas, Nevada 89103, USA
+        </p>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="flex-col items-center hidden md:items-start md:block">
+        <h2 class="mb-2 text-lg text-center">Follow us</h2>
+        <div class="flex gap-4">
+          <i class="ri-instagram-line text-[22px]"></i>
+
+          <i class="ri-facebook-circle-fill text-[22px]"></i>
+
+          <i class="ri-youtube-fill text-[22px]"></i>
+          <!-- Replace with real social icons -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div
+    class="container max-w-[958px] flex flex-col items-center text-center justify-between  gap-2 mx-auto md:flex-row text-[#ECECEC] ">
+    <p class="text-center sm:text-[18px] text-[12px]">Designed by</p>
+    <p class="text-center sm:text-[18px] text-[12px]">TAE© Copyright 2023 All Rights Reserved</p>
+  </div>
+    <style>
+      .clip-triangle {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+    </style>
+  </body>
+  <script src="/assets/js/menu.js"></script>
+  <script src="/assets/js/script.js"></script>
+</html>

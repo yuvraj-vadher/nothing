@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aero Engines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background: linear-gradient(141deg, #D9D9D9 0%, #767575 41%, #0E0E18 100%);
+        }
+
+        @layer base {
+      html {
+        zoom: 0.75;
+      }
+    }
+    </style>
+</head>
+
+<body class="bg-[#000111]">
+
+    <!-- Section with shared background -->
+    <div
+        class="hero-selection flex flex-col items-center relative bg-[url('/assets/img/bg/mobile-hero-bg.png')] sm:h-[1400px] md:bg-[url('/assets/img/bg/about-bg.svg')] bg-no-repeat bg-contain">
+<!-- Navbar -->
+<nav
+      class=" top-0 left-0 sm:text-[18px] lg:text-[20px] md:text-[14px] max-w-[1440px] w-full flex items-center gap-4 mt-8 z-[99999]">
+      <div class="container px-1 mx-auto md:px-6">
+        <div
+          class="relative flex justify-between w-full mt-6 bg-opacity-[50%] items-center py-1 px-2 md:py-0 gap-4 bg-[#D9D9D9] rounded-full shadow-[inset_0_4px_3.4px_rgba(0,0,0,0.25)]">
+          <button id="hamburger" class="flex items-center px-8 text-black md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <button class="md:hidden flex items-center px-8 py-2 text-white rounded-full bg-[#67559B]">
+            Portal
+          </button>
+          <div
+            class="absolute z-10 transform -translate-x-1/2 md:left-0 left-1/2 md:-translate-x-1/2 md:transform-none">
+            <div class="flex items-center shadow-[inset_0_4px_3.4px_rgba(0,0,0,0.25)] p-2 bg-[#D9D9D9] rounded-full">
+              <img src="/assets/img/logo.png" alt="Logo" class="w-12 sm:w-12 md:w-12 lg:w-22 xl:w-24" />
+
+            </div>
+          </div>
+          <ul class="justify-between hidden w-full px-8 py-3 space-x-6 rounded-full md:flex pl-28">
+            <li>
+              <a href="index.html"
+                class="px-4 py-2 font-normal  text-white transition rounded-md ">Home</a>
+            </li>
+            <li class="relative group">
+              <a href="about.html" class="px-4 py-2  font-normal text-white transition rounded-md">
+                About
+              </a>
+              <!-- Dropdown Menu -->
+              <ul class="absolute left-0 hidden w-48 mt-2 bg-white rounded-md  shadow-lg group-hover:block">
+                <li>
+                  <a href="Our_team.html" class="block px-4 py-2 text-gray-700 0 hover:text-white ">
+                    Our Team
+                  </a>
+                </li>
+                <li>
+                  <a href="brand.html" class="block px-4 py-2 text-gray-700 0 hover:text-white ">
+                    Brand Identity
+                  </a>
+                </li>
+                <li>
+                  <a href="life.html" class="block px-4 py-2 text-gray-700 0 hover:text-white ">
+                    Life at TAE
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="services.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md ">Services &
+                Inventory</a>
+            </li>
+            <li>
+              <a href="quality_check.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md ">Quality Check</a>
+            </li>
+            <li>
+              <a href="parts.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md ">Parts Revenue</a>
+            </li>
+            <li>
+              <a href="contact_us.html"
+                class="px-4 py-2 font-normal text-white transition rounded-md ">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div id="dropdown-menu" class="hidden flex-col space-y-2 bg-[#D9D9D9] rounded-md shadow-md mt-4 p-4">
+          <a href="index.html" class="block px-4 py-2 font-normal text-black transition rounded-md ">
+            Home
+          </a>
+          <ul class="relative group">
+            <a href="about.html" class="px-4 py-2 font-normal text-black transition rounded-md ">
+              About
+            </a>
+            <!-- Dropdown Menu -->
+            <ul class="absolute left-0 hidden w-48 mt-2 bg-white rounded-md shadow-lg group-hover:block">
+              <li>
+                <a href="our_team.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="brand.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Brand Identity
+                </a>
+              </li>
+              <li>
+                <a href="life.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black">
+                  Life at TAE
+                </a>
+              </li>
+            </ul>
+          </ul>
+
+          </a>
+          <a href="services.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Services & Inventory
+          </a>
+          <a href="quality_check.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Quality Check
+          </a>
+          <a href="parts.html" class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Parts Revenue
+          </a>
+          <a href="contact_us.html"
+            class="block px-4 py-2 font-normal text-black transition rounded-md hover:bg-gray-500">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+
+    </nav>
+
+<!-- Mobile Menu Toggle Script -->
+
+<!-- Hero Section -->
+<div
+    class="relative bg-[url('/assets/img/bg/about-bg.svg')] bg-cover bg-center py-16 text-center mt-20 rounded-t-none rounded-b-[50px] shadow-lg mx-auto max-w-5xl">
+    <h1 class="text-4xl font-bold text-white">Get in Touch</h1>
+
+    <section
+        class="bg-[#ffffff]/60 rounded-t-none rounded-b-[80px] px-6 py-6 max-w-4xl mx-auto shadow-lg flex justify-between items-center relative mt-6 flex-wrap lg:flex-nowrap">
+        <!-- Upper Strip -->
+        <div class="absolute top-0 left-0 right-0 h-[10px] bg-[#ffffff]/10"></div>
+
+        <!-- Contact Icon -->
+        <div class="flex flex-col items-center flex-1">
+            <img src="/assets/img/icons/contact-us icon.svg" alt="Contact Icon" class="w-12 h-12">
+        </div>
+
+        <!-- Divider -->
+        <div class="h-20 w-[5px] bg-black self-center"></div>
+
+        <!-- Appointment Icon -->
+        <div class="flex flex-col items-center flex-1">
+            <img src="/assets/img/icons/appointment-book icon.svg" alt="Appointment Icon" class="w-12 h-12">
+        </div>
+
+        <!-- Divider -->
+        <div class="h-20 w-[5px] bg-black self-center"></div>
+
+        <!-- Chat Icon -->
+        <div class="flex flex-col items-center flex-1">
+            <img src="/assets/img/icons/chat icon.svg" alt="Chat Icon" class="w-12 h-12">
+        </div>
+
+        <!-- Divider -->
+        <div class="h-20 w-[5px] bg-black self-center"></div>
+
+        <!-- Location Icon -->
+        <div class="flex flex-col items-center flex-1">
+            <img src="/assets/img/icons/map icon.svg" alt="Location Icon" class="w-12 h-12">
+        </div>
+    </section>
+</div>
+
+
+<!-- Book an Appointment -->
+<div class="bg-black text-white py-10 sm:py-20 px-4 sm:px-10 md:px-16 lg:px-20 bg-center">
+    <h2 class="text-2xl sm:text-4xl font-bold mb-4 text-left ml-2 sm:ml-8 md:ml-12 lg:ml-[50px]">Book an Appointment
+    </h2>
+    <div
+        class="flex flex-col sm:flex-row items-center bg-gray-300 rounded-md overflow-hidden max-w-full sm:max-w-3xl mx-auto">
+        <!-- Left Section -->
+        <div class="flex-1 h-60 sm:h-80 bg-gray-400"></div>
+        <!-- Right Section -->
+        <div class="flex flex-col justify-end items-center w-full sm:w-72 h-60 sm:h-80 bg-gray-500">
+            <button class="bg-black w-32 sm:w-40 h-10 sm:h-12 rounded-full mb-4"></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Contact Details -->
+<section class="max-w-[900px] mx-auto py-12 px-6 bg-black rounded-lg shadow-lg">
+    <h2 class="text-4xl font-bold text-white text-left mb-8">Contact Details</h2>
+    <div class="flex flex-col md:flex-row gap-6">
+        <!-- Contact Details Section (Left Box) -->
+        <div class="bg-[#564289] p-6 rounded-lg flex-[2] flex flex-col">
+            <!-- Timeline -->
+            <ol class="relative border-s border-gray-200 dark:border-white">
+                <!-- Phone -->
+                <li class="mb-10 ms-4 flex items-start">
+                    <div
+                        class="w-8 h-8 bg-white flex items-center justify-center rounded-full border-2 border-gray-300 mr-4">
+                        <i class="ri-phone-line text-[#564289] text-xl"></i>
+                    </div>
+                    <div class="break-words overflow-hidden">
+                        <p class="text-base font-normal text-white">XXX-XXX-XXXX</p>
+                    </div>
+                </li>
+                <!-- Phone 2 -->
+                <li class="mb-10 ms-4 flex items-start">
+                    <div
+                        class="w-8 h-8 bg-white flex items-center justify-center rounded-full border-2 border-gray-300 mr-4">
+                        <i class="ri-phone-line text-[#564289] text-xl"></i>
+                    </div>
+                    <div class="break-words overflow-hidden">
+                        <p class="text-base font-normal text-white">XXX-XXX-XXXX</p>
+                    </div>
+                </li>
+                <!-- Email -->
+                <li class="ms-4 flex items-start">
+                    <div
+                        class="w-8 h-8 bg-white flex items-center justify-center rounded-full border-2 border-gray-300 mr-4">
+                        <i class="ri-mail-line text-[#564289] text-xl"></i>
+                    </div>
+                    <div class="break-words overflow-hidden">
+                        <p class="text-base font-normal text-white">sales@targetaeroengines.com</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Social Media Section (Right Box) -->
+        <div class="bg-black p-4 rounded-lg flex-[1] border border-white">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-1">
+                <!-- LinkedIn -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-10 h-10 bg-[#ffffff] flex items-center justify-center rounded-full">
+                        <i class="ri-linkedin-line text-[#564289] text-xl"></i>
+                    </div>
+                    <span class="text-white text-sm mt-2 break-words">LinkedIn</span>
+                </div>
+                <!-- Instagram -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-10 h-10 bg-[#ffffff] flex items-center justify-center rounded-full">
+                        <i class="ri-instagram-line text-[#564289] text-xl"></i>
+                    </div>
+                    <span class="text-white text-sm mt-2 break-words">Instagram</span>
+                </div>
+                <!-- Twitter -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-10 h-10 bg-[#ffffff] flex items-center justify-center rounded-full">
+                        <i class="ri-twitter-line text-[#564289] text-xl"></i>
+                    </div>
+                    <span class="text-white text-sm mt-2 break-words">Twitter</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Chat with us-->
+<section
+    class="flex flex-col md:flex-row items-center justify-center bg-[#0C0C15] text-white py-12 px-4 md:px-20 rounded-lg shadow-lg max-w-[1400px] mx-auto min-h-screen">
+    <!-- Left Section (Chat Illustration) -->
+    <div class="bg-gray-400 rounded-lg w-full md:w-[770px] h-[400px] flex flex-col justify-between p-8 mb-8 md:mb-0">
+        <!-- Top Thin Strip -->
+        <div class="bg-gray-300 h-3 rounded-lg w-[85%] mb-6"></div>
+        <!-- Chat Box Rows -->
+        <div class="flex flex-col gap-6">
+            <!-- Left Chat Bubble -->
+            <div class="bg-gray-500 text-gray-200 rounded-lg py-3 px-5 w-[75%] self-start"></div>
+            <!-- Right Chat Bubble -->
+            <div class="bg-gray-300 text-gray-700 rounded-lg py-3 px-5 w-[75%] self-end"></div>
+            <!-- Another Left Chat Bubble -->
+            <div class="bg-gray-500 text-gray-200 rounded-lg py-3 px-5 w-[65%] self-start"></div>
+        </div>
+        <!-- Bottom Thicker Strip -->
+        <div class="bg-gray-300 h-8 rounded-lg w-[95%] mt-6"></div>
+    </div>
+
+    <!-- Right Section (Chat Text) -->
+    <div class="text-center md:text-left md:ml-12">
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+            Chat with <br />
+            <span class="text-5xl">us!</span>
+        </h2>
+        <p class="text-gray-400 text-lg md:text-xl leading-relaxed">
+            While our roots may be in Las Vegas, our vision extends far beyond, with aspirations to spread our
+            excellence all over the world.
+        </p>
+    </div>
+</section>
+
+
+
+
+<!-- Map -->
+<section class="max-w-[1440px] mx-auto py-16 px-4 md:px-20">
+    <img src="/assets/img/mapimage.png" alt="Map" class="w-full h-auto object-cover rounded-lg">
+</section>
+
+    <footer class="py-8 text-white">
+        <div
+            class="container flex flex-col items-center justify-between w-full gap-[20px] md:gap-8 px-4 mx-auto md:px-8 md:flex-row">
+    
+            <!-- Logo Section -->
+            <div class="flex flex-col items-center md:items-center">
+                <img src="/assets/img/logo.png" alt="Target Aero Engines" class="mb-4">
+                <h2 class="text-[16px] text-center md:text-center">Target Aero Engines</h2>
+            </div>
+    
+            <!-- Contact Information Section -->
+            <div class="flex flex-col items-center md:items-center w-[350px]">
+                <h2 class=" text-[12px] md:text-lg text-center">sales@targetaeroengines.com</h2>
+                <p class="text-[12px] md:text-sm text-center">4100 West Flamingo Road, Las Vegas, Nevada 89103, USA</p>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="flex-col items-center hidden md:items-start md:block">
+                <h2 class="mb-2 text-lg">Follow us</h2>
+                <div class="flex gap-4">
+                    <i class="text-xl"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 30 30">
+                            <path
+                                d="M15,3C8.373,3,3,8.373,3,15c0,6.016,4.432,10.984,10.206,11.852V18.18h-2.969v-3.154h2.969v-2.099c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L19.73,18.18h-3.106v8.697 C22.481,26.083,27,21.075,27,15C27,8.373,21.627,3,15,3z">
+                            </path>
+                        </svg></i> <!-- Replace with real social icons -->
+                    <i class="text-xl"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 30 30">
+                            <path
+                                d="M15,3C8.373,3,3,8.373,3,15c0,6.016,4.432,10.984,10.206,11.852V18.18h-2.969v-3.154h2.969v-2.099c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L19.73,18.18h-3.106v8.697 C22.481,26.083,27,21.075,27,15C27,8.373,21.627,3,15,3z">
+                            </path>
+                        </svg></i> <!-- Replace with real social icons -->
+                    <i class="text-xl"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 30 30">
+                            <path
+                                d="M15,3C8.373,3,3,8.373,3,15c0,6.016,4.432,10.984,10.206,11.852V18.18h-2.969v-3.154h2.969v-2.099c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L19.73,18.18h-3.106v8.697 C22.481,26.083,27,21.075,27,15C27,8.373,21.627,3,15,3z">
+                            </path>
+                        </svg></i> <!-- Replace with real social icons -->
+                </div>
+            </div>
+    
+        </div>
+    </footer>
+    <div
+        class="container flex flex-col items-center  text-center justify-between w-full gap-2 md:gap-8 px-4 mx-auto md:px-8 md:flex-row text-[#ECECEC] py-4 ">
+        <p class="text-center text-[12px]">Designed by </p>
+        <p class="text-center text-[12px]">TAE© Copyright 2023 All Rights Reserved</p>
+    
+    </div>
+    
+    </body>
+    
+    
+    <script src="/assets/js/menu.js"></script>
+    <script src="/assets/js/script.js"></script>
+    
+    </html>
